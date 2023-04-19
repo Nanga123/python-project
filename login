@@ -1,7 +1,4 @@
 
-Aryan N <aryannangarath407@gmail.com>
-Apr 18, 2023, 2:29 PM (1 day ago)
-to me
 
 from tkinter import*
 from PIL import  ImageTk,Image
