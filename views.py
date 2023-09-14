@@ -75,6 +75,9 @@ def Trending(request):
 
     return render(request,'trending.html')
 
+def Home1(request):
+    return render(request,'home1.html')
+
 
 
 
