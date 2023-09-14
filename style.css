@@ -4,3 +4,24 @@ h1{
 body{
     background-color: #1e1f26;
 }
+.upcoming-img-box{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+
+}
+
+.buttons{
+    position:absolute;
+    bottom:2rem;
+    left:2rem;
+    color: #cd8c38;
+    background-color:black;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid #cd8c38;
+    font-weight: 500;
+}
