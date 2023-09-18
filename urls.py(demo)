@@ -10,4 +10,5 @@ urlpatterns=[
     path('next',views.Next,name='next'),
     path('trending',views.Trending,name='trending'),
     path('home1',views.Home1,name='home1'),
+    path('oppenheimer',views.Oppenheimer,name='oppenheimer'),
 ]
