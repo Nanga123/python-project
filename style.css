@@ -2,7 +2,7 @@ h1{
     color:blue;
 }
 body{
-    background-color: #1e1f26;
+    background-color:antiquewhite;
 }
 .upcoming-img-box{
     position: relative;
@@ -24,4 +24,15 @@ body{
     border-radius: 2rem;
     border: 1px solid #cd8c38;
     font-weight: 500;
+}
+.oppenheimer-container{
+    position:-ms-page;
+    height: 47%;
+    width: 12%;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    background-color: aquamarine;
+
+    
 }
