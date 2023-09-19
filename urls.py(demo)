@@ -11,4 +11,12 @@ urlpatterns=[
     path('trending',views.Trending,name='trending'),
     path('home1',views.Home1,name='home1'),
     path('oppenheimer',views.Oppenheimer,name='oppenheimer'),
+    path('jailer',views.Jailer,name='jailer'),
+    path('jawan',views.Jawan,name='jawan'),
+    path('demonslayer',views.Demonslayer,name='demonslayer'),
+    path('twenty',views.twenty,name='twenty'),
+    #path('spiderman',views.Spiderman,name='spiderman'),
+    #path('kantara',views.Kantara,name='kantara'),
+
+    
 ]
