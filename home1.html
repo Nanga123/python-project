@@ -6,11 +6,69 @@
         <img src="{%static '/images/oppenheimer.png' %}" alt="">
         <div class="buttons">
             <a href="{% url 'demo:oppenheimer' %}" type="button" class="btn">Book now</a>
-      
-        </div>      
+        </div> 
+        <h3 class="movie-title">Oppenheimer</h3>     
     </div>
-              
+    <div class ="current-movies">
+        <div class="current-movie">
+            <div class="cm-img-box">
+                <img src="{%static '/images/jailer.jpg' %}" alt="">
+            </div>
+            <h3 class="movie-title">Jailer</h3>
+            <div class="booking">
+                <a href="{% url 'demo:jailer' %}" class="btn" type="button">Book now</a>
+            </div>
+        </div>
+        
+        <div class="current-movie">
+            <div class="cm-img-box">
+                <img src="{%static '/images/jawan.jpg' %}" alt="">
+            </div>
+            <h3 class="movie-title">Jawan</h3>
+            <div class="booking">
+                <a href="{% url 'demo:jawan' %}" class="btn" type="button">Book now</a>
+            </div>
+        </div>
+        <div class="current-movie">
+            <div class="cm-img-box">
+                <img src="{%static '/images/demonslayer.jpg' %}" alt="">
+            </div>
+            <h3 class="movie-title">Demon Slayer:To the swordsmith village</h3>
+            <div class="booking">
+                <a href="{% url 'demo:demonslayer' %}" class="btn" type="button">Book now</a>
+            </div>
+        </div>
+        <div class="current-movie">
+            <div class="cm-img-box">
+                <img src="{%static '/images/kantara.jpg' %}" alt="">
+            </div>
+            <h3 class="movie-title">Kantara</h3>
+            <div class="booking">
+                <a href="#" class="btn" type="button">Book now</a>
+            </div>
+        </div>
+        <div class="current-movie">
+            <div class="cm-img-box">
+                <img src="{%static '/images/2018.jpg' %}" alt="">
+            </div>
+            <h3 class="movie-title">2018</h3>
+            <div class="booking">
+                <a href="{% url 'demo:twenty' %}" class="btn" type="button">Book now</a>
+            </div>
+        </div>
+        <div class="current-movie">
+            <div class="cm-img-box">
+                <img src="{%static '/images/spiderman.jpg' %}" alt="">
+            </div>
+            <h3 class="movie-title">Spider-Man:Across the Spider-Verse</h3>
+            <div class="booking">
+                <a href="#" class="btn" type="button">Book now</a>
+            </div>
+        </div>
+    </div> 
+
                   
               
 </div>
 {% endblock %}
+ 
