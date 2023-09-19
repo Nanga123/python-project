@@ -1,0 +1,8 @@
+{% extends 'oppenheimer.html' %}
+{% load static %}
+{% block content %}
+<img src="{%static '/images/test1.png' %}" alt="">
+<a href="{%static '/images/test1.png' %}" download="qrcode" class="download-btn">Download image
+    <i class="fa fa-download"></i>
+</a>
+{% endblock %}
