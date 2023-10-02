@@ -53,22 +53,6 @@ def Login(request):
 
         return render(request,'login.html')
 
-def homepage(request):
-
-    global data
-
-    if request.method=='POST':
-
-        data=request.POST['data']
-
-        img=make(data)
-
-        img.save('demo/static/images/test.png')
-    else:
-        pass
-
-    return render(request,'home.html')
-
 
 def Next(request):
 
