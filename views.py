@@ -97,13 +97,17 @@ def Oppenheimer(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:Oppenheimer,type:thriller,rating:8.6,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test1.png')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('oppenheimer')
+        else:
+            movie_details=" "
+            movie_details+="movie:Oppenheimer,type:thriller,rating:8.6,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test1.png')
     else:
 
         pass
