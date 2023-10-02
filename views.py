@@ -711,6 +711,52 @@ def Kantara(request):
 
         pass
     return render(request,'kantara.html',data5)
+def Jjk(request):
+    conn=mysc.connect (user='root',host='localhost',passwd='sql123inlife',database='bookmyshow')
+    cur=conn.cursor()
+    qy='select moviename from movies where moviename="jujtsu kaisen 0"'
+    cur.execute(qy)
+    data=cur.fetchall()
+    qy2='select cast from movies where moviename="jujtsu kaisen 0"'
+    cur.execute(qy2)
+    data1=cur.fetchall()
+    qy3='select type from movies where moviename="jujtsu kaisen 0"'
+    cur.execute(qy3)
+    data2=cur.fetchall()
+    qy4='select language from movies where moviename="jujtsu kaisen 0"'
+    cur.execute(qy4)
+    data3=cur.fetchall()
+    qy5='select rating from movies where moviename="jujtsu kaisen 0"'
+    cur.execute(qy5)
+    data4=cur.fetchall()
+    data5={
+        'movie_name':(data),
+        'movie_cast':(data1),
+        'movie_type':(data2),
+        'movie_lang':(data3),
+        'movie_rate':(data4),
+
+    }
+
+    
+    if request.method=="POST" :
+        name=request.POST['name']
+        phone_no=request.POST['PHONE_NO']
+        tickets=request.POST['tickets']
+        movie_details=" "
+        movie_details+="movie:JujtsuKaisen0,type:anime,rating:7.8,"
+        movie_details+=",username:" + str(name)
+        movie_details+=",phone_no:"+ str(phone_no)
+        movie_details+=",no_of_tickets:"+ str(tickets)
+        img1=make(movie_details)
+        img1.save('demo/static/images/test15.png')
+        return render(request,'jjk2.html')
+    else:
+
+        pass
+    return render(request,'jjk.html',data5)
+
+
 
 
 
