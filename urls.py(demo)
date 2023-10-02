@@ -17,6 +17,11 @@ urlpatterns=[
     path('spiderman',views.Spiderman,name='spiderman'),
     path('kantara',views.Kantara,name='kantara'),
     path('jjk',views.Jjk,name='jjk'),   
-
-    
+    path('catchmeifyoucan',views.CatchMeIfYouCan,name='catchmeifyoucan'),
+    path('goodfellas',views.Goodfellas,name='goodfellas'),
+    path('rope',views.Rope,name='rope'),
+    path('serenity',views.Serenity,name='serenity'),
+    path('life',views.Life,name='life'),
+    path('october',views.October,name='october'),
+    path('phenomenon',views.Phenomenon,name='phenomenon'),
 ]
