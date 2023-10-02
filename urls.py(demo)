@@ -5,7 +5,6 @@ app_name="demo"
 
 urlpatterns=[
     path('',views.signupview, name="signup"),
-    path('home',views.homepage, name="home"),
     path('login',views.login1, name="login"),
     path('next',views.Next,name='next'),
     path('trending',views.Trending,name='trending'),
