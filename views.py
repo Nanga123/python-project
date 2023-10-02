@@ -440,6 +440,52 @@ def Serenity(request):
     return render(request,'Serenity.html',data5)
 
 
+def October(request):
+    conn=mysc.connect (user='root',host='localhost',passwd='sql123inlife',database='bookmyshow')
+    cur=conn.cursor()
+    qy='select moviename from movies where moviename="October"'
+    cur.execute(qy)
+    data=cur.fetchall()
+    qy2='select cast from movies where moviename="October"'
+    cur.execute(qy2)
+    data1=cur.fetchall()
+    qy3='select type from movies where moviename="October"'
+    cur.execute(qy3)
+    data2=cur.fetchall()
+    qy4='select language from movies where moviename="October"'
+    cur.execute(qy4)
+    data3=cur.fetchall()
+    qy5='select rating from movies where moviename="October"'
+    cur.execute(qy5)
+    data4=cur.fetchall()
+    data5={
+        'movie_name':(data),
+        'movie_cast':(data1),
+        'movie_type':(data2),
+        'movie_lang':(data3),
+        'movie_rate':(data4),
+
+    }
+
+    
+    if request.method=="POST" :
+        name=request.POST['name']
+        phone_no=request.POST['PHONE_NO']
+        tickets=request.POST['tickets']
+        movie_details=" "
+        movie_details+="movie:Life,type:Drama,rating:7.5,"
+        movie_details+=",username:" + str(name)
+        movie_details+=",phone_no:"+ str(phone_no)
+        movie_details+=",no_of_tickets:"+ str(tickets)
+        img1=make(movie_details)
+        img1.save('demo/static/images/test9.png')
+        return render(request,'October2.html')
+    else:
+
+        pass
+    return render(request,'October.html',data5)
+
+
 
 
 
