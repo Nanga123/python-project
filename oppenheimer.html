@@ -28,6 +28,11 @@
                     </select><br>
     <input type="submit" value="generate qr code",id=btn>
 </form>
+    {% if messages %}
+        {% for message in messages %}
+            {{message}}
+        {% endfor %}
+    {% endif %}
 </body>
 </html>
 
