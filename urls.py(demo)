@@ -14,8 +14,9 @@ urlpatterns=[
     path('jawan',views.Jawan,name='jawan'),
     path('demonslayer',views.Demonslayer,name='demonslayer'),
     path('twenty',views.twenty,name='twenty'),
-    #path('spiderman',views.Spiderman,name='spiderman'),
-    #path('kantara',views.Kantara,name='kantara'),
+    path('spiderman',views.Spiderman,name='spiderman'),
+    path('kantara',views.Kantara,name='kantara'),
+    path('jjk',views.Jjk,name='jjk'),   
 
     
 ]
