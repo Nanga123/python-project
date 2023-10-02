@@ -30,6 +30,11 @@
         {% block content %}
             
         {% endblock %}
-</form>
+</form
+    {% if messages %}
+        {% for message in messages %}
+            {{message}}
+        {% endfor %}
+    {% endif %}
 </body>
 </html>
