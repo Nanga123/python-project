@@ -144,14 +144,18 @@ def Jailer(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:jailer,type:action,rating:7.2,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test2.png')
-        return render(request,'jailer2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('jailer')
+        else:
+            movie_details=" "
+            movie_details+="movie:jailer,type:action,rating:7.2,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test2.png')
+            return render(request,'jailer2.html')
     else:
 
         pass
@@ -188,14 +192,18 @@ def Jawan(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:jawan,type:action,rating:7.7,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test3.png')
-        return render(request,'jawan2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('jawan')
+        else:
+            movie_details=" "
+            movie_details+="movie:jawan,type:action,rating:7.7,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test3.png')
+            return render(request,'jawan2.html')
     else:
 
         pass
@@ -233,14 +241,18 @@ def Demonslayer(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:Demonslayer:Totheswordsmithvillage,type:anime,rating:7.4,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test4.png')
-        return render(request,'demonslayer2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('demonslayer')
+        else:
+            movie_details=" "
+            movie_details+="movie:Demonslayer:Totheswordsmithvillage,type:anime,rating:7.4,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test4.png')
+            return render(request,'demonslayer2.html')
     else:
 
         pass
@@ -277,14 +289,18 @@ def twenty(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:2018,typesurvival,rating:8.4,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test5.png')
-        return render(request,'twenty2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('twenty')
+        else:
+            movie_details=" "
+            movie_details+="movie:2018,typesurvival,rating:8.4,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test5.png')
+            return render(request,'twenty2.html')
     else:
 
         pass
@@ -322,14 +338,18 @@ def CatchMeIfYouCan(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:Catch Me If You Can,type:Drama,rating:7.6,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test6.png')
-        return render(request,'CatchMeIfYouCan2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('catchmeifyoucan')
+        else:
+            movie_details=" "
+            movie_details+="movie:Catch Me If You Can,type:Drama,rating:7.6,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test6.png')
+            return render(request,'CatchMeIfYouCan2.html')
     else:
 
         pass
@@ -368,14 +388,18 @@ def Life(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:Life,type:Thriller,rating:6.6,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test7.png')
-        return render(request,'Life2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('life')
+        else:
+            movie_details=" "
+            movie_details+="movie:Life,type:Thriller,rating:6.6,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test7.png')
+            return render(request,'Life2.html')
     else:
 
         pass
@@ -414,14 +438,18 @@ def Serenity(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:Serenity,type:Action,rating:7.8,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test8.png')
-        return render(request,'Serenity2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('serenity')
+        else:
+            movie_details=" "
+            movie_details+="movie:Serenity,type:Action,rating:7.8,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test8.png')
+            return render(request,'Serenity2.html')
     else:
 
         pass
@@ -460,14 +488,18 @@ def October(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:October,type:Drama,rating:7.5,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test9.png')
-        return render(request,'October2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('october')
+        else:
+            movie_details=" "
+            movie_details+="movie:October,type:Drama,rating:7.5,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test9.png')
+            return render(request,'October2.html')
     else:
 
         pass
@@ -506,14 +538,18 @@ def Phenomenon(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:Phenomenon,type:Drama,rating:6.4,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test10.png')
-        return render(request,'Phenomenon2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('phenomenon')
+        else:
+            movie_details=" "
+            movie_details+="movie:Phenomenon,type:Drama,rating:6.4,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test10.png')
+            return render(request,'Phenomenon2.html')
     else:
 
         pass
@@ -552,14 +588,18 @@ def Goodfellas(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:Goodfellas,type:Thriller,rating:8.7,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test11.png')
-        return render(request,'Goodfellas2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('goodfellas')
+        else:
+            movie_details=" "
+            movie_details+="movie:Goodfellas,type:Thriller,rating:8.7,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test11.png')
+            return render(request,'Goodfellas2.html')
     else:
 
         pass
@@ -598,14 +638,18 @@ def Rope(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:Rope,type:Thriller,rating:7.9,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test12.png')
-        return render(request,'Rope2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('rope')
+        else:
+            movie_details=" "
+            movie_details+="movie:Rope,type:Thriller,rating:7.9,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test12.png')
+            return render(request,'Rope2.html')
     else:
 
         pass
@@ -643,14 +687,18 @@ def Spiderman(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:SpiderMan:AcrosstheSpiderVerse,type:sciFi,rating:8.7,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test13.png')
-        return render(request,'spiderman2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('spidrman')
+        else:
+            movie_details=" "
+            movie_details+="movie:SpiderMan:AcrosstheSpiderVerse,type:sciFi,rating:8.7,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test13.png')
+            return render(request,'spiderman2.html')
     else:
 
         pass
@@ -687,14 +735,18 @@ def Kantara(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:Kantara,type:drama,rating:8.3,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test14.png')
-        return render(request,'kantara2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('kantara')
+        else:
+            movie_details=" "
+            movie_details+="movie:Kantara,type:drama,rating:8.3,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test14.png')
+            return render(request,'kantara2.html')
     else:
 
         pass
@@ -731,14 +783,18 @@ def Jjk(request):
         name=request.POST['name']
         phone_no=request.POST['PHONE_NO']
         tickets=request.POST['tickets']
-        movie_details=" "
-        movie_details+="movie:JujtsuKaisen0,type:anime,rating:7.8,"
-        movie_details+=",username:" + str(name)
-        movie_details+=",phone_no:"+ str(phone_no)
-        movie_details+=",no_of_tickets:"+ str(tickets)
-        img1=make(movie_details)
-        img1.save('demo/static/images/test15.png')
-        return render(request,'jjk2.html')
+        if len(phone_no)!=10:
+            messages.success(request,("phone number should consist of 10 digits"))
+            return HttpResponseRedirect('jjk')
+        else:
+            movie_details=" "
+            movie_details+="movie:JujtsuKaisen0,type:anime,rating:7.8,"
+            movie_details+=",username:" + str(name)
+            movie_details+=",phone_no:"+ str(phone_no)
+            movie_details+=",no_of_tickets:"+ str(tickets)
+            img1=make(movie_details)
+            img1.save('demo/static/images/test15.png')
+            return render(request,'jjk2.html')
     else:
 
         pass
