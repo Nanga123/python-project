@@ -11,7 +11,8 @@
     {% csrf_token %}
     <input type="text" name="username" placeholder="username"><br>
     <input type="passsord" name="password" placeholder='password'><br>
-    <input type="submit" name="submit">
+    <input type="submit" name="submit"><br>
+	  don't have an account? <a href="{% url 'demo:signup' %}" class="btn" type="button">sign up</a>
     
 </form>
     {% if messages %}
